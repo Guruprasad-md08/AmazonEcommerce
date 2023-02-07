@@ -20,6 +20,10 @@ public class HomePage {
 	@FindBy(xpath="//img[contains(@alt,'STRIFF Adjustable Laptop Tabletop')]")
 	private WebElement laptop;	
 	
+	@FindBy(xpath="//span[text()='Fresh']")
+	private WebElement fresh;
+	
+	
 	public HomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -42,5 +46,8 @@ public class HomePage {
 	{
 		laptop.click();
 	}	
-	
+	public void clickonfresh()
+	{
+		fresh.click();
+	}	
 }

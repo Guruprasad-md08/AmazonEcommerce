@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="script.TC4"/>
+      <class name="script.TC5"/>
       <class name="script.TC2"/>
       <class name="script.TC3"/>
       <class name="script.TC1"/>

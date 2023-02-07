@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class StepGroup {
 	public WebDriver driver;
 	public PropertyFile pdata = new PropertyFile();
-	public WebdriverUtilities  driverutilitiess= new WebdriverUtilities();
+	
 	
 	@BeforeMethod
 	public void OpenApp() throws IOException {

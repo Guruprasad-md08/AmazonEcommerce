@@ -2,13 +2,27 @@ package genericLib;
 
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import pomFeatures.FreshPage;
 
 public class WebdriverUtilities {
+	
+	WebDriver driver;
+	
+	public void waitForSkip(WebDriver driver)
+	{
+		FreshPage fpage = new FreshPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOf(fpage.getSkip()));
+	}
 	
 	public void dropdown(WebElement ele, String text)
 	{
